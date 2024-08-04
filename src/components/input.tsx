@@ -8,10 +8,9 @@ export function Input({ label, ...props }: InputProps) {
   const id = useId();
 
   return (
-    <>
       <label
         htmlFor={id}
-        className="flex flex-col gap-2 text-sm font-normal md:text-base"
+        className="flex flex-col gap-2 text-sm font-normal col-span-full xs:col-span-1 md:text-base"
       >
         {label}
       <input
@@ -20,6 +19,5 @@ export function Input({ label, ...props }: InputProps) {
         {...props}
       />
       </label>
-    </>
   );
 }

@@ -8,10 +8,9 @@ interface TextareaProps
 export function Textarea({ label, ...props }: TextareaProps) {
   const id = useId();
   return (
-    <div className='col-span-full'>
       <label
         htmlFor={id}
-        className="text-sm flex flex-col gap-2 font-normal md:text-base"
+        className="text-sm flex flex-col gap-2 font-normal col-span-full md:text-base"
       >
         {label}
       <textarea
@@ -20,6 +19,5 @@ export function Textarea({ label, ...props }: TextareaProps) {
         {...props}
       />
       </label>
-    </div>
   );
 }

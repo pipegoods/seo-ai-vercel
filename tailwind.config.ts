@@ -23,6 +23,7 @@ const config: Config = {
         body: "var(--background-image)",
       },
       screens: {
+        xs: "475px",
         sm: "600px",
       },
     },

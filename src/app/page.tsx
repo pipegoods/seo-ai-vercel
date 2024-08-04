@@ -2,7 +2,7 @@ import { FormSeo } from './form-seo';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-layout p-4 gap-8 flex-1 content-between text-neutral-100 max-w-[600px]">
+    <div className="font-sans grid grid-rows-layout p-4 gap-10 flex-1 content-between text-neutral-100 max-w-[600px]">
       <h1 className="font-semibold text-2xl md:text-4xl leading-normal">
         Crear tu <a href="https://developer.mozilla.org/es/docs/Glossary/SEO" target='_blank'><abbr title="Search Engine Optimization" className='no-underline text-blue-200'>SEO</abbr></a> nunca fue tan fácil
       </h1>
