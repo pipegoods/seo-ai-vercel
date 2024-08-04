@@ -7,6 +7,7 @@ import { useFormState } from 'react-dom';
 import { ButtonSubmit } from './button-submit';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Button } from '@/components/button';
 
 const initialState = {
   issues: '',
@@ -25,6 +26,32 @@ export function FormSeo() {
     createSeoAction,
     initialState
   );
+
+  const handleCopy = (codeText: string) => {
+    navigator.clipboard
+      .writeText(codeText)
+      .then(() => {
+        alert('Texto copiado al portapapeles');
+      })
+      .catch((err) => {
+        console.error('Error al copiar al portapapeles: ', err);
+      });
+  };
+
+  const codeString = `
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>${state.object.seo.title}</title>
+      <meta name="description" content="${
+        state.object.seo.description
+      }" />
+      <meta name="keywords" content="${state.object.seo.keywords.join(
+        ', '
+      )}" />
+      <link rel="canonical" href="${state.object.seo.url}" />
+    </head>
+  `;
 
   return (
     <>
@@ -66,31 +93,26 @@ export function FormSeo() {
       </form>
 
       {state.object.seo.title && (
-        <SyntaxHighlighter
-          language="html"
-          customStyle={{
-            fontSize: '1.2rem',
-            padding: '1rem',
-            borderRadius: '0.5rem',
-          }}
-          style={dracula}
-          wrapLines
-        >
-          {`
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${state.object.seo.title}</title>
-    <meta name="description" content="${
-      state.object.seo.description
-    }" />
-    <meta name="keywords" content="${state.object.seo.keywords.join(
-      ', '
-    )}" />
-    <link rel="canonical" href="${state.object.seo.url}" />
-  </head>
-        `}
-        </SyntaxHighlighter>
+        <>
+          <SyntaxHighlighter
+            language="html"
+            customStyle={{
+              fontSize: '1.2rem',
+              padding: '1rem',
+              borderRadius: '0.5rem',
+            }}
+            style={dracula}
+            wrapLines
+          >
+            {codeString}
+          </SyntaxHighlighter>
+          <Button
+            onClick={() => handleCopy(codeString)}
+            className="mt-4 p-2 bg-blue-500 text-white rounded"
+          >
+            Copiar código
+          </Button>
+        </>
       )}
     </>
   );
