@@ -11,7 +11,7 @@ Mi proyecto te ayudará a crear la estructura del `<head>` para tu sitio web. So
 
 ## Requisitos
 
-- Node.js (versión 14 o superior)
+- Node.js (versión 20 o superior)
 - pnpm (gestor de paquetes)
 
 ## Instalación
