@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+# SEO AI Generator
 
-## Getting Started
+Mi proyecto te ayudará a crear la estructura del `<head>` para tu sitio web. Solo necesitas proporcionar información como la URL del sitio web, el nombre y una descripción. La inteligencia artificial se encargará de generar el código para tu `<head>` y además mejorará las meta descripciones, cumpliendo el rol de "Experto en SEO".
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Generación automática de la estructura del `<head>`.
+- Mejora de meta descripciones.
+- Optimización de etiquetas SEO.
+- Facilidad de uso mediante la entrada de datos básicos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requisitos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js (versión 14 o superior)
+- pnpm (gestor de paquetes)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter, a custom Google Font.
+## Instalación
 
-## Learn More
+1. Clona este repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/seo-ai-generator.git
+    cd seo-ai-generator
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Renombra el archivo `env.example` a `.env`:
+    ```bash
+    mv env.example .env
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Coloca tu API Key de OpenAI en el archivo `.env`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Instala las dependencias:
+    ```bash
+    pnpm install
+    ```
 
-## Deploy on Vercel
+5. Inicia la aplicación:
+    ```bash
+    pnpm start
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6. Abre `http://localhost:3000` en tu navegador.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Uso
+
+1. Ingresa la URL de tu sitio web.
+2. Proporciona el nombre y una descripción de tu sitio web.
+3. Haz clic en "Enviar" para obtener el código del `<head>` optimizado.
+4. Copia y pega el código generado en el archivo HTML de tu sitio web.
+
+## Contribuir
+
+¡Las contribuciones son bienvenidas! Por favor, sigue estos pasos para contribuir:
+
+1. Haz un fork del repositorio.
+2. Crea una rama con tu característica o corrección de errores:
+    ```bash
+    git checkout -b mi-nueva-caracteristica
+    ```
+3. Realiza los cambios necesarios y realiza los commits:
+    ```bash
+    git commit -m "Agrega una nueva característica"
+    ```
+4. Sube los cambios a tu repositorio:
+    ```bash
+    git push origin mi-nueva-caracteristica
+    ```
+5. Abre una Pull Request en GitHub.
+
+## Contacto
+
+Si tienes alguna pregunta o sugerencia, no dudes en contactar via Discord.
