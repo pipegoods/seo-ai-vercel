@@ -62,8 +62,8 @@ export function FormSeo() {
   `;
 
   return (
-    <div>
-      <form action={formAction} className="flex flex-col gap-6 h-full">
+    <div className="flex flex-col gap-14">
+      <form action={formAction} className="flex flex-col gap-6">
         <fieldset className="grid grid-cols-2 gap-4">
           <Input
             name="website"
@@ -93,7 +93,6 @@ export function FormSeo() {
         )}
         <ButtonSubmit />
       </form>
-
       {state.object.seo.title && (
         <div className="relative">
           <SyntaxHighlighter
@@ -101,16 +100,21 @@ export function FormSeo() {
             customStyle={{
               fontSize: "1.2rem",
               padding: "1rem",
-              borderRadius: "0.5rem",
+              borderRadius: "0.125rem",
             }}
             style={dracula}
             wrapLines
+            codeTagProps={{ style: { fontSize: "1.2rem",
+              maxWidth: "288px",
+              display: "flex",
+              flexDirection: "column",
+             } }}
           >
             {codeString}
           </SyntaxHighlighter>
           <Button
             onClick={() => handleCopy(codeString)}
-            className={`absolute top-0 right-0 ${bgButtonCopy} transition-all hover:bg-green-700 hover:text-green-100 hover:border-green-700 border w-auto self-end ${colorButtonCopy} ${strokeButtonCopy} rounded-sm text-sm px-2 py-1`}
+            className={`absolute top-1 right-1 ${bgButtonCopy} transition-all hover:bg-green-700 hover:text-green-100 hover:border-green-700 border w-auto self-end ${colorButtonCopy} ${strokeButtonCopy} rounded-sm text-sm px-2 py-1`}
           >
             {textButtonCopy}
           </Button>
