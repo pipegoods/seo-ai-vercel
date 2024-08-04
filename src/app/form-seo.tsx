@@ -91,12 +91,6 @@ export function FormSeo() {
             ))}
           </ul>
         )}
-        <Button
-          onClick={() => handleCopy(codeString)}
-          className={`${bgButtonCopy} transition-all hover:bg-green-700 hover:text-green-100 hover:border-green-700 border w-auto self-end ${colorButtonCopy} ${strokeButtonCopy} rounded-sm text-sm px-2 py-1`}
-        >
-          {textButtonCopy}
-        </Button>
         <ButtonSubmit />
       </form>
 
