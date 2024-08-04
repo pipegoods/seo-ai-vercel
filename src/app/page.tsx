@@ -8,6 +8,19 @@ export default function Home() {
       </h1>
 
       <FormSeo />
+
+      <footer>
+        <p className="text-center text-gray-400 mt-10">
+          Creado por{' '}
+          <a
+            href="https://andresvizcaino.com"
+            target="_blank"
+            className="text-blue-400"
+          >
+            pipegoods
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
