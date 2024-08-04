@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background-image: url('/bg.svg');
 }
 
 @media (prefers-color-scheme: dark) {

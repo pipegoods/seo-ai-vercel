@@ -8,18 +8,18 @@ interface TextareaProps
 export function Textarea({ label, ...props }: TextareaProps) {
   const id = useId();
   return (
-    <div>
+    <div className='col-span-full'>
       <label
         htmlFor={id}
-        className="block mb-2 text-sm font-medium text-white"
+        className="text-sm flex flex-col gap-2 font-normal md:text-base"
       >
         {label}
-      </label>
       <textarea
         id={id}
-        className="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+        className="outline-none resize-none border text-sm rounded-sm w-full px-3 py-2 bg-neutral-700 border-neutral-600 placeholder-neutral-400 text-inherit focus:ring-blue-500 focus:border-blue-500 md:text-base"
         {...props}
       />
+      </label>
     </div>
   );
 }

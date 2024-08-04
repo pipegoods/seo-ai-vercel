@@ -8,18 +8,18 @@ export function Input({ label, ...props }: InputProps) {
   const id = useId();
 
   return (
-    <div>
+    <>
       <label
         htmlFor={id}
-        className="block mb-2 text-sm font-medium text-white"
+        className="flex flex-col gap-2 text-sm font-normal md:text-base"
       >
         {label}
-      </label>
       <input
         id={id}
-        className=" border text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+        className="border outline-none text-sm rounded-sm w-full px-3 py-2 bg-neutral-700 border-neutral-600 placeholder-neutral-400 text-inherit focus:ring-blue-500 focus:border-blue-500 md:text-base"
         {...props}
       />
-    </div>
+      </label>
+    </>
   );
 }
