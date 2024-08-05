@@ -6,7 +6,7 @@ export function ButtonSubmit() {
   return (
     <>
       <Button type="submit" disabled={pending}>
-        {pending ? 'Enviando...' : 'Enviar'}
+        {pending ? 'Generando...' : 'Generar'}
       </Button>
     </>
   );
